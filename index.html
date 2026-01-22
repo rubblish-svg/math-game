@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>100以内加减法闯关游戏</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <div id="start-screen" class="screen active">
+            <h1>100以内加减法闯关游戏</h1>
+            <p>共20关，每关10题，难度逐级递增</p>
+            <button id="start-btn">开始游戏</button>
+        </div>
+
+        <div id="game-screen" class="screen">
+            <div class="game-header">
+                <div class="level-info">第 <span id="current-level">1</span> 关 / 20</div>
+                <div class="progress-info">进度: <span id="current-question">1</span> / 10</div>
+                <div class="score-info">得分: <span id="current-score">0</span></div>
+            </div>
+            
+            <div class="question-container">
+                <div id="question" class="question"></div>
+                <input type="number" id="answer-input" placeholder="请输入答案">
+                <button id="submit-btn">提交答案</button>
+            </div>
+
+            <div class="feedback" id="feedback"></div>
+        </div>
+
+        <div id="result-screen" class="screen">
+            <h1 id="result-title">闯关成功！</h1>
+            <div class="result-stats">
+                <p>最终得分: <span id="final-score">0</span></p>
+                <p>正确率: <span id="accuracy">0%</span></p>
+                <p>用时: <span id="time-used">0</span> 秒</p>
+            </div>
+            
+            <div class="weakness-analysis">
+                <h2>薄弱环节分析</h2>
+                <div id="weakness-content"></div>
+            </div>
+
+            <div class="result-buttons">
+                <button id="restart-btn">重新闯关（新题目）</button>
+                <button id="review-btn">查看错题</button>
+            </div>
+        </div>
+
+        <div id="review-screen" class="screen">
+            <h1>错题回顾</h1>
+            <div id="review-content"></div>
+            <button id="back-to-result">返回结果页</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
